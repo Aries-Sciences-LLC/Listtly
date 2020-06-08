@@ -1,0 +1,27 @@
+PODS:
+  - FanMenu (0.7.1):
+    - Macaw
+  - GhostTypewriter (1.0.0)
+  - Macaw (0.9.1):
+    - SWXMLHash
+  - SWXMLHash (4.6.0)
+  - TextFieldEffects (1.4.0)
+  - TwicketSegmentedControl (0.1.2)
+
+DEPENDENCIES:
+  - FanMenu
+  - GhostTypewriter
+  - TextFieldEffects
+  - TwicketSegmentedControl
+
+SPEC CHECKSUMS:
+  FanMenu: 193b20007df3bbc01d263c08f82caaaa324da09d
+  GhostTypewriter: 70c6f827ada4716bda0550046b01bf783331ee00
+  Macaw: 8b13bb7ae2f527b3c7b2787988bbc5461a1c66e3
+  SWXMLHash: 3c39a53723202800e9e1a87f14b2fe7ac1da98ec
+  TextFieldEffects: 4ee41b5216e674d55fb6ac25107bf1af7629176f
+  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
+
+PODFILE CHECKSUM: 4f3124d623026c447ee8e49e139ec73921a24e6f
+
+COCOAPODS: 1.4.0
