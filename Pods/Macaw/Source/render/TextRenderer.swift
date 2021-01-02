@@ -44,13 +44,13 @@ class TextRenderer: NodeRenderer {
         // for now move the rect itself
         if var color = text.fill as? Color {
             color = RenderUtils.applyOpacity(color, opacity: opacity)
-            var attributes = [NSAttributedStringKey.font: font,
-                              NSAttributedStringKey.foregroundColor: getTextColor(color)]
+            var attributes = [NSAttributedString.Key.font: font,
+                              NSAttributedString.Key.foregroundColor: getTextColor(color)]
             if let stroke = text.stroke {
                 if let c = stroke.fill as? Color {
-                    attributes[NSAttributedStringKey.strokeColor] = getTextColor(c)
+                    attributes[NSAttributedString.Key.strokeColor] = getTextColor(c)
                 }
-                attributes[NSAttributedStringKey.strokeWidth] = stroke.width as NSObject?
+                attributes[NSAttributedString.Key.strokeWidth] = stroke.width as NSObject?
             }
             MGraphicsPushContext(ctx.cgContext!)
             message.draw(in: getBounds(font), withAttributes: attributes)
@@ -108,7 +108,7 @@ class TextRenderer: NodeRenderer {
             return .zero
         }
 
-        let textAttributes = [NSAttributedStringKey.font: font]
+        let textAttributes = [NSAttributedString.Key.font: font]
         let textSize = NSString(string: text.text).size(withAttributes: textAttributes)
         return CGRect(x: calculateAlignmentOffset(text, font: font),
                       y: calculateBaselineOffset(text, font: font),
@@ -132,7 +132,7 @@ class TextRenderer: NodeRenderer {
 
     fileprivate func calculateAlignmentOffset(_ text: Text, font: MFont) -> CGFloat {
         let textAttributes = [
-            NSAttributedStringKey.font: font
+            NSAttributedString.Key.font: font
         ]
         let textSize = NSString(string: text.text).size(withAttributes: textAttributes)
         var alignmentOffset = CGFloat(0)

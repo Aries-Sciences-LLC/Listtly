@@ -103,12 +103,12 @@ open class SVGSerializer {
     }
 
     fileprivate func polygonToSVG(_ polygon: Polygon) -> String {
-        let points = polygon.points.flatMap { String($0) }.joined(separator: ",")
+        let points = polygon.points.compactMap { String($0) }.joined(separator: ",")
         return tag(SVGPolygonOpenTag, ["points": points])
     }
 
     fileprivate func polylineToSVG(_ polyline: Polyline) -> String {
-        let points = polyline.points.flatMap { String($0) }.joined(separator: ",")
+        let points = polyline.points.compactMap { String($0) }.joined(separator: ",")
         return tag(SVGPolylineOpenTag, ["points": points])
     }
 
@@ -119,9 +119,9 @@ open class SVGSerializer {
                 let flags = RenderUtils.numToBools(segment.data[3])
                 let large: Double = flags[0] ? 1 : 0
                 let sweep: Double = flags[1] ? 1 : 0
-                d += "\(segment.type) \([segment.data[0], segment.data[1], segment.data[2], large, sweep, segment.data[4], segment.data[5]].flatMap { String(Int($0)) }.joined(separator: " "))"
+                d += "\(segment.type) \([segment.data[0], segment.data[1], segment.data[2], large, sweep, segment.data[4], segment.data[5]].compactMap { String(Int($0)) }.joined(separator: " "))"
             } else {
-                d += "\(segment.type) \(segment.data.flatMap { String(Int($0)) }.joined(separator: " "))"
+                d += "\(segment.type) \(segment.data.compactMap { String(Int($0)) }.joined(separator: " "))"
             }
         }
         return tag(SVGPathOpenTag, ["d": d])

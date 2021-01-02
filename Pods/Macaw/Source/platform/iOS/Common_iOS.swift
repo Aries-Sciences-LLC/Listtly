@@ -19,14 +19,14 @@ import Foundation
     public typealias MImage = UIImage
     public typealias MBezierPath = UIBezierPath
     public typealias MGestureRecognizer = UIGestureRecognizer
-    public typealias MGestureRecognizerState = UIGestureRecognizerState
+    public typealias MGestureRecognizerState = UIGestureRecognizer.State
     public typealias MGestureRecognizerDelegate = UIGestureRecognizerDelegate
     public typealias MTapGestureRecognizer = UITapGestureRecognizer
     public typealias MPanGestureRecognizer = UIPanGestureRecognizer
     public typealias MPinchGestureRecognizer = UIPinchGestureRecognizer
     public typealias MRotationGestureRecognizer = UIRotationGestureRecognizer
     public typealias MScreen = UIScreen
-    public typealias MViewContentMode = UIViewContentMode
+    public typealias MViewContentMode = UIView.ContentMode
 
     extension MTapGestureRecognizer {
         func mNumberOfTouches() -> Int {

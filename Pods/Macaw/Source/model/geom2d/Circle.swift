@@ -2,9 +2,9 @@ import Foundation
 
 open class Circle: Locus {
 
-    open let cx: Double
-    open let cy: Double
-    open let r: Double
+    public let cx: Double
+    public let cy: Double
+    public let r: Double
 
     public init(cx: Double = 0, cy: Double = 0, r: Double = 0) {
         self.cx = cx

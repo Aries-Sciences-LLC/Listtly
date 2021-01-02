@@ -63,7 +63,7 @@ class AnimationUtils {
         var currentNode = node
         while parent != .none {
             if let group = parent as? Group {
-                let localIndex = group.contents.index(of: currentNode) ?? group.contents.count
+                let localIndex = group.contents.firstIndex(of: currentNode) ?? group.contents.count
 
                 for i in 0..<localIndex {
                     zIndex += childrenTotalCount(group.contents[i])

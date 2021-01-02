@@ -1,6 +1,6 @@
 open class SVGConstants {
 
-    open static let valueToColor = [
+    public static let valueToColor = [
         0x000000: "black",
         0x000080: "navy",
         0x00008b: "darkblue",
@@ -142,7 +142,7 @@ open class SVGConstants {
         0xf0f8ff: "aliceblue"
     ]
 
-    open static let colorList = [
+    public static let colorList = [
         "aliceblue": 0xf0f8ff,
         "antiquewhite": 0xfaebd7,
         "aqua": 0x00ffff,
@@ -293,29 +293,29 @@ open class SVGConstants {
         "yellowgreen": 0x9acd32
     ]
 
-    open static func valueToColor(_ color: Int) -> String? {
+    public static func valueToColor(_ color: Int) -> String? {
         return SVGConstants.colorList.filter { (_, v) -> Bool in v == color }.map { (k, _) -> String in k }.first
     }
 
-    open static let defaultStrokeLineCap = LineCap.butt
-    open static let defaultStrokeLineJoin = LineJoin.miter
+    public static let defaultStrokeLineCap = LineCap.butt
+    public static let defaultStrokeLineJoin = LineJoin.miter
 
-    open static let moveToAbsolute = "M"
-    open static let moveToRelative = "m"
-    open static let lineToAbsolute = "L"
-    open static let lineToRelative = "l"
-    open static let lineHorizontalAbsolute = "H"
-    open static let lineHorizontalRelative = "h"
-    open static let lineVerticalAbsolute = "V"
-    open static let lineVerticalRelative = "v"
-    open static let curveToAbsolute = "C"
-    open static let curveToRelative = "c"
-    open static let smoothCurveToAbsolute = "S"
-    open static let smoothCurveToRelative = "s"
-    open static let closePathAbsolute = "Z"
-    open static let closePathRelative = "z"
+    public static let moveToAbsolute = "M"
+    public static let moveToRelative = "m"
+    public static let lineToAbsolute = "L"
+    public static let lineToRelative = "l"
+    public static let lineHorizontalAbsolute = "H"
+    public static let lineHorizontalRelative = "h"
+    public static let lineVerticalAbsolute = "V"
+    public static let lineVerticalRelative = "v"
+    public static let curveToAbsolute = "C"
+    public static let curveToRelative = "c"
+    public static let smoothCurveToAbsolute = "S"
+    public static let smoothCurveToRelative = "s"
+    public static let closePathAbsolute = "Z"
+    public static let closePathRelative = "z"
 
-    open static let pathCommands = [
+    public static let pathCommands = [
         moveToAbsolute,
         moveToRelative,
         lineToAbsolute,

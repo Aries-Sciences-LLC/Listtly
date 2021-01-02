@@ -34,11 +34,11 @@ class RenderUtils {
     class func mapLineJoinToString(_ join: LineJoin?) -> String {
         switch join {
         case LineJoin.round?:
-            return kCALineJoinRound
+            return convertFromCAShapeLayerLineJoin(CAShapeLayerLineJoin.round)
         case LineJoin.bevel?:
-            return kCALineJoinBevel
+            return convertFromCAShapeLayerLineJoin(CAShapeLayerLineJoin.bevel)
         default:
-            return kCALineJoinMiter
+            return convertFromCAShapeLayerLineJoin(CAShapeLayerLineJoin.miter)
         }
     }
 
@@ -56,11 +56,11 @@ class RenderUtils {
     class func mapLineCapToString(_ cap: LineCap?) -> String {
         switch cap {
         case LineCap.round?:
-            return kCALineCapRound
+            return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.round)
         case LineCap.square?:
-            return kCALineCapSquare
+            return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.square)
         default:
-            return kCALineCapButt
+            return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.butt)
         }
     }
 
@@ -99,7 +99,7 @@ class RenderUtils {
                 return
             }
 
-            if fontName.characters.first == " " {
+            if fontName.first == " " {
                 let index = fontName.index(fontName.startIndex, offsetBy: 1)
                 let fixedName = String(fontName.suffix(from: index))
                 customFont = MFont(name: fixedName, size: CGFloat(size))
@@ -477,4 +477,14 @@ class RenderUtils {
     fileprivate class func newCGRect(_ rect: Rect) -> CGRect {
         return CGRect(x: CGFloat(rect.x), y: CGFloat(rect.y), width: CGFloat(rect.w), height: CGFloat(rect.h))
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAShapeLayerLineJoin(_ input: CAShapeLayerLineJoin) -> String {
+	return input.rawValue
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAShapeLayerLineCap(_ input: CAShapeLayerLineCap) -> String {
+	return input.rawValue
 }

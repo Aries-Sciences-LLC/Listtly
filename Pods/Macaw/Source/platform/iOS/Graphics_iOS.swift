@@ -32,11 +32,11 @@ import Foundation
     }
 
     func MImagePNGRepresentation(_ image: MImage) -> Data? {
-        return UIImagePNGRepresentation(image)
+        return image.pngData()
     }
 
     func MImageJPEGRepresentation(_ image: MImage, _ quality: CGFloat = 0.8) -> Data? {
-        return UIImageJPEGRepresentation(image, quality)
+        return image.jpegData(compressionQuality: quality)
     }
 
     func MMainScreen() -> MScreen? {

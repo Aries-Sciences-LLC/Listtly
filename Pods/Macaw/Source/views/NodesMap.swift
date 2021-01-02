@@ -67,7 +67,7 @@ class NodesMap {
 
             var contents = group.contents
             var indexToInsert = 0
-            if let index = contents.index(of: node) {
+            if let index = contents.firstIndex(of: node) {
                 contents.remove(at: index)
                 indexToInsert = index
             }

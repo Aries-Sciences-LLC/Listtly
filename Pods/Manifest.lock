@@ -14,6 +14,15 @@ DEPENDENCIES:
   - TextFieldEffects
   - TwicketSegmentedControl
 
+SPEC REPOS:
+  trunk:
+    - FanMenu
+    - GhostTypewriter
+    - Macaw
+    - SWXMLHash
+    - TextFieldEffects
+    - TwicketSegmentedControl
+
 SPEC CHECKSUMS:
   FanMenu: 193b20007df3bbc01d263c08f82caaaa324da09d
   GhostTypewriter: 70c6f827ada4716bda0550046b01bf783331ee00
@@ -24,4 +33,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 4f3124d623026c447ee8e49e139ec73921a24e6f
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.10.0

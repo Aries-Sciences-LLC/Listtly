@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-Listtly/Pods-Listtly-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FanMenu/FanMenu.framework
+${BUILT_PRODUCTS_DIR}/GhostTypewriter/GhostTypewriter.framework
+${BUILT_PRODUCTS_DIR}/Macaw/Macaw.framework
+${BUILT_PRODUCTS_DIR}/SWXMLHash/SWXMLHash.framework
+${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework
+${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework

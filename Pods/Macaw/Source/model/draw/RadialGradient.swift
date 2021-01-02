@@ -10,7 +10,7 @@ open class RadialGradient: Gradient {
     open var cy: Double
     open var fx: Double
     open var fy: Double
-    open let r: Double
+    public let r: Double
 
     public init(cx: Double = 0.5, cy: Double = 0.5, fx: Double = 0.5, fy: Double = 0.5, r: Double = 0.5, userSpace: Bool = false, stops: [Stop] = []) {
         self.cx = cx
